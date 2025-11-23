@@ -1,27 +1,31 @@
-LLM-Powered Fact Checker (RAG System)
+# LLM-Powered Fact Checker (RAG System)
 
-A lightweight Retrieval-Augmented Generation (RAG) system that extracts factual claims from text, retrieves relevant evidence using embeddings, and verifies the claim using an LLM.
-Outputs: True, False, or Unverifiable with reasoning, evidence, and confidence scoring.
+A lightweight Retrieval-Augmented Generation (RAG) system that extracts factual claims from text, retrieves relevant evidence using embeddings, and classifies each claim as:
 
-🚀 Features
+- **True**
+- **False**
+- **Unverifiable**
 
-Claim Extraction (spaCy)
+Includes a modular backend pipeline and a complete Streamlit UI.
 
-Embedding-Based Retrieval (SentenceTransformers MiniLM)
+---
 
-Top-K Similarity Search
+## 🚀 Features
 
-Similarity Threshold for Unverifiable Claims
+- Claim Extraction (spaCy)
+- Embedding-Based Retrieval (SentenceTransformers MiniLM)
+- Top-K Similarity Search
+- Similarity Threshold for Unverifiable Claims
+- LLM Judge (Groq Llama 3.1)
+- Confidence Scoring & Evidence Ranking
+- Streamlit UI Dashboard
+- Fully modular, scalable pipeline
 
-LLM Judge (Groq Llama 3.1)
+---
 
-Confidence Scoring & Evidence Ranking
+## 📁 Project Structure
 
-Streamlit UI Dashboard
-
-Fully modular pipeline
-
-📁 Project Structure
+```
 LLM-FACT-CHECKER/
 │
 ├── app_streamlit.py
@@ -42,32 +46,67 @@ LLM-FACT-CHECKER/
 │   ├── sample_input.txt
 │   └── sample_output.json
 │
+├── screenshots/
+│   ├── ui_home.png
+│   ├── verdict_example.png
+│   └── settings_sidebar.png
+│
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Installation
-git clone https://github.com/JayDubey19/llm-fact-checker
+---
+
+## ⚙️ Installation
+
+```bash
+git clone <repo-link>
 cd llm-fact-checker
 
 python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
+```
 
+### Optional: Rebuild embeddings
 
-(Optional) rebuild embeddings:
-
+```bash
 python src/build_index.py
+```
 
+---
 
-Run Streamlit:
+## ▶️ Run Streamlit
 
+```bash
 streamlit run app_streamlit.py
+```
 
-🧪 Sample Input
+---
+
+## 📸 Screenshots
+
+### Main UI
+![UI Screenshot](screenshots/ui_home.png)
+
+### Verdict Output
+![Verdict Screenshot](screenshots/verdict_example.png)
+
+### Settings Sidebar
+![Settings Screenshot](screenshots/settings_sidebar.png)
+
+---
+
+## 🧪 Sample Input
+
+```
 The government launched a new initiative to support solar irrigation pumps for farmers.
+```
 
-📤 Sample Output
+## 📤 Sample Output
+
+```json
 {
   "claim": "The government launched a new initiative to support solar irrigation pumps for farmers.",
   "verdict": "Likely True",
@@ -78,18 +117,21 @@ The government launched a new initiative to support solar irrigation pumps for f
   ],
   "reasoning": "The retrieved fact confirms the claim directly."
 }
+```
 
-⭐ Highlights
+---
 
-Multi-claim processing
+## ⭐ Highlights
 
-Confidence + similarity scoring
+- Multi-claim processing  
+- Confidence & similarity scoring  
+- Hallucination-resistant pipeline  
+- Scalable architecture  
+- Fast Groq inference  
+- Clean and interactive Streamlit UI
 
-Hallucination-resistant design
+---
 
-Modular architecture (easy to expand)
+## 👤 Author
 
-Fast inference using Groq Llama 3.1
-
-Clean Streamlit UI with tuning controls
-
+**Jay Dubey**
