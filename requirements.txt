@@ -1,0 +1,7 @@
+spacy==3.7.4
+sentence-transformers
+numpy
+pandas
+openai
+tqdm
+streamlit

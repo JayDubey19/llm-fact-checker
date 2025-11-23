@@ -1,0 +1,19 @@
+{
+  "claim": "The government launched a new initiative to support solar irrigation pumps for farmers.",
+  "verdict": "Likely True",
+  "confidence": 92.1,
+  "max_similarity": 0.9909814491702527,
+  "evidence": [
+    "Government launches new initiative to support solar irrigation pumps for farmers."
+  ],
+  "reasoning": "The retrieved fact confirms the claim directly. The wording and context match exactly, making the claim factually correct based on verified government information.",
+  "retrieved": [
+    {
+      "id": 3,
+      "statement": "Government launches new initiative to support solar irrigation pumps for farmers.",
+      "source": "PIB",
+      "date": "2024-02-05",
+      "similarity": 0.9909814491702527
+    }
+  ]
+}
