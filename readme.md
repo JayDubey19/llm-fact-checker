@@ -88,13 +88,12 @@ streamlit run app_streamlit.py
 ## 📸 Screenshots
 
 ### Main UI
-![UI Screenshot](screenshots/ui_home.png)
+<img width="1917" height="917" alt="Image" src="https://github.com/user-attachments/assets/2b522bc0-54f9-4d0a-9ec9-c087b886f699" />
 
 ### Verdict Output
-![Verdict Screenshot](screenshots/verdict_example.png)
+<img width="1918" height="922" alt="Image" src="https://github.com/user-attachments/assets/19b0ebe8-1acd-4c3c-86d4-98f009a07737" />
 
-### Settings Sidebar
-![Settings Screenshot](screenshots/settings_sidebar.png)
+<img width="1907" height="902" alt="Image" src="https://github.com/user-attachments/assets/f50fdc7d-ccc3-4358-8874-a222f3fbbd73" />
 
 ---
 
